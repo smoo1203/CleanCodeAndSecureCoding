@@ -1,6 +1,3 @@
-# CleanCodeAndSecureCoding
-CleanCodeAndSecureCoding
-
 ## 클린코드(Clean Code) & 시큐어코딩(Secure Coding)
 
 <br>
