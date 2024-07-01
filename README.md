@@ -91,29 +91,29 @@ Node* FindNodeInSubtree(Node* subtree, string name, int depth);
 
 - 왼쪽에는 변수를, 오른쪽에는 상수를 두고 비교
 
-  ```java
-  if(length >= 10)
-  
-  while(bytes_received < bytest_expected)
-  ```
+    ```java
+    if(length >= 10)
 
-  <br>
+    while(bytes_received < bytest_expected)
+    ```
+
+<br>
 
 - 부정이 아닌 긍정을 다루자
 
-  ```java
-  // a!=b는 부정
-  if(a == b)
-  {
-      // same
-  }
-  else
-  {
-      // different
-  }
-  ```
+    ```java
+    // a!=b는 부정
+    if(a == b)
+    {
+        // same
+    }
+    else
+    {
+        // different
+    }
+    ```
 
-  <br>
+<br>
 
 - if/else를 사용하며, 삼항 연산자는 매우 간단한 경우만 사용
 
@@ -152,7 +152,7 @@ var vote_changed = function(old_vote, new_vote)
         }
     }
 
-    set_score(score);    
+    set_score(score);
 };
 ```
 
@@ -178,7 +178,7 @@ var vote_value = function(vote)
         return -1;
     }
 
-    return 0;    
+    return 0;
 };
 
 var vote_changed = function(old_vote, new_vote)
@@ -270,7 +270,7 @@ var vote_changed = function(old_vote, new_vote)
 - 안전하지 않은 코드
 
 ```
-String query "SELECT * FROM users WHERE userid = '" + userid + "'" + "AND password = '" + password + "'";
+String query = "SELECT * FROM users WHERE userid = '" + userid + "'" + "AND password = '" + password + "'";
 
 Statement stmt = connection.createStatement();
 ResultSet rs = stmt.executeQuery(query);
