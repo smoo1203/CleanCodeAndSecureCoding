@@ -102,10 +102,14 @@ Node* FindNodeInSubtree(Node* subtree, string name, int depth);
 - 부정이 아닌 긍정을 다루자
 
   ```java
-  if( a == b ) { // a!=b는 부정
-  	// same
-  } else {
-  	// different
+  // a!=b는 부정
+  if(a == b)
+  {
+      // same
+  }
+  else
+  {
+      // different
   }
   ```
 
@@ -128,21 +132,27 @@ Node* FindNodeInSubtree(Node* subtree, string name, int depth);
 사용자가 추천을 하거나, 이미 선택한 추천을 변경하기 위해 버튼을 누르면 vote_change(old_vote, new_vote) 함수를 호출한다고 가정해보자
 
 ```javascript
-var vote_changed = function (old_vote, new_vote) {
-    
-	var score = get_score();
-    
-	if (new_vote !== old_vote) {
-		if (new_vote == 'Up') {
-			score += (old_vote === 'Down' ? 2 : 1);
-		} else if (new_vote == 'Down') {
-			score -= (old_vote === 'Up' ? 2 : 1);
-		} else if (new_vote == '') {
-			score += (old_vote === 'Up' ? -1 : 1);
-		}
-	}
-	set_score(score);
-    
+var vote_changed = function(old_vote, new_vote)
+{
+    var score = get_score();
+
+    if(new_vote !== old_vote)
+    {
+        if(new_vote == 'Up')
+        {
+            score += (old_vote === 'Down' ? 2 : 1);
+        }
+        else if(new_vote == 'Down')
+        {
+            score -= (old_vote === 'Up' ? 2 : 1);
+        }
+        else if(new_vote == '')
+        {
+            score += (old_vote === 'Up' ? -1 : 1);
+        }
+    }
+
+    set_score(score);    
 };
 ```
 
@@ -156,24 +166,27 @@ var vote_changed = function (old_vote, new_vote) {
 별도로 함수로 분리하여 가독성을 향상시키자
 
 ```javascript
-var vote_value = function (vote) {
-    
-    if(vote === 'Up') {
+var vote_value = function(vote)
+{
+    if(vote === 'Up')
+    {
         return +1;
     }
-    if(vote === 'Down') {
+
+    if(vote === 'Down')
+    {
         return -1;
     }
-    return 0;
-    
+
+    return 0;    
 };
 
-var vote_changed = function (old_vote, new_vote) {
-    
+var vote_changed = function(old_vote, new_vote)
+{
     var score = get_score();
-    
-    score -= vote_value(old_vote); // 이전 값 제거
-    score += vote_value(new_vote); // 새로운 값 더함
+
+    score -= vote_value(old_vote);    // 이전 값 제거
+    score += vote_value(new_vote);    // 새로운 값 더함
     set_score(score);
 };
 ```
@@ -237,8 +250,6 @@ var vote_changed = function (old_vote, new_vote) {
 이클립스와 같은 IDE 도구로 이용
 
 <br>
-
-
 
 ### 시큐어 코딩
 
